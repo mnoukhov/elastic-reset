@@ -1,0 +1,8 @@
+model_ckpt: "llama-7b-sft"
+tokenizer: "huggyllama/llama-7b" 
+load_8bit: True
+do_sample: True
+temperature: 0.2
+top_p: 0.95
+n_samples: 200
+HF_ALLOW_CODE_EVAL: "1"

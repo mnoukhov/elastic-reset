@@ -1,0 +1,11 @@
+model: "huggyllama/llama-7b"
+tokenizer: "huggyllama/llama-7b" 
+dataset_name: "lvwerra/stack-exchange-paired"
+subset: "data/evaluation"
+split: "train"
+data_size: 4000
+seq_length: 1024
+stride: 512
+seed: 0
+batch_size: 1
+bit8: True

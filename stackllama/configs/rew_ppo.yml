@@ -1,0 +1,10 @@
+model_name: "llama-7b-rlhf-ppo-600"
+reward_model_name: kashif/llama-7b_stack-exchange_RM_peft-adapter-merged
+save_freq: 100
+batch_size: 8
+gradient_accumulation_steps: 8
+batched_gen: True
+output_dir: results/
+early_stopping: True
+seed: 0
+steps: 8

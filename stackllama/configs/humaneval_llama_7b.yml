@@ -1,0 +1,8 @@
+tasks: humaneval
+model: "huggyllama/llama-7b"
+max_length_generation: 512
+temperature: 0.2
+top_p: 0.95
+n_samples: 20
+batch_size: 10
+allow_code_execution: True

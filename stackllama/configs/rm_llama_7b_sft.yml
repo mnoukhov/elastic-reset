@@ -1,0 +1,2 @@
+model_name: "llama-7b-sft"
+tokenizer_name: hf-internal-testing/llama-tokenizer

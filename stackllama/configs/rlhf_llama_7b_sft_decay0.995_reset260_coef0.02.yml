@@ -1,0 +1,14 @@
+model_name: "llama-7b-se"
+tokenizer_name: "huggyllama/llama-7b" 
+reward_model_name: "llama-7b-se-rm"
+log_with: "wandb"
+save_freq: 100
+batch_size: 16
+gradient_accumulation_steps: 8
+batched_gen: True
+output_dir: results/
+early_stopping: True
+seed: 0
+reset_freq: 260
+ema_decay: 0.995
+init_kl_coef: 0.02

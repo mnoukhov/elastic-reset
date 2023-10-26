@@ -1,0 +1,7 @@
+model_path: huggyllama/llama-7b
+streaming: True
+no_gradient_checkpointing: True
+learning_rate: 1e-5
+max_steps: 5000
+output_dir: llama-sft
+gradient_accumulation_steps: 2
