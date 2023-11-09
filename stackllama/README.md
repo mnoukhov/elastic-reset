@@ -22,6 +22,6 @@ python examples/stack_llama/scripts/merge_peft_adapter.py --adapter_model_name=X
 
 I used `huggyllama/llama-7b` as the base model. Note the order that models must be merged:
 
-llama-7b-se = merge_peft_adapter llama-7b + llama-7b-se-peft
-llama-7b-se-rm = merge_peft_adapter llama-7b-se + llama-7b-se-rm-peft
-llama-7b-se-rl = merge_peft_adapter llama-7b-se + llama-7b-se-rl-peft
+1. llama-7b-se = merge_peft_adapter llama-7b + llama-7b-se-peft
+2. llama-7b-se-rm = merge_peft_adapter llama-7b-se + llama-7b-se-rm-peft
+3. llama-7b-se-rl = merge_peft_adapter llama-7b-se + llama-7b-se-rl-peft
