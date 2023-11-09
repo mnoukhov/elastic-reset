@@ -10,9 +10,9 @@ For all methods use `python run.py -e configs/` and choose the corresponding con
 ## Pretrained Models
 
 My LoRA layers for the vanilla StackLLaMA are publicly available on huggingface as 
-- `mnoukhov/llama-7b-se-peft`
-- `mnoukhov/llama-7b-se-rm-peft`
-- `mnoukhov/llama-7b-se-rl-peft`
+- [`mnoukhov/llama-7b-se-peft`](https://huggingface.co/mnoukhov/llama-7b-se-peft)
+- [`mnoukhov/llama-7b-se-rm-peft`](https://huggingface.co/mnoukhov/llama-7b-se-rm-peft)
+- [`mnoukhov/llama-7b-se-rl-peft`](https://huggingface.co/mnoukhov/llama-7b-se-rl-peft)
 
 LoRA layers were using at all stages to reduce memory requirements. 
 At each stage the peft adapter layers were merged with the base model, using: 
@@ -20,4 +20,8 @@ At each stage the peft adapter layers were merged with the base model, using:
 python examples/stack_llama/scripts/merge_peft_adapter.py --adapter_model_name=XXX --base_model_name=YYY --output_name=ZZZ
 ```
 
-I used `huggyllama/llama-7b` as the base model
+I used `huggyllama/llama-7b` as the base model. Note the order that models must be merged:
+
+llama-7b-se = merge_peft_adapter llama-7b + llama-7b-se-peft
+llama-7b-se-rm = merge_peft_adapter llama-7b-se + llama-7b-se-rm-peft
+llama-7b-se-rl = merge_peft_adapter llama-7b-se + llama-7b-se-rl-peft
